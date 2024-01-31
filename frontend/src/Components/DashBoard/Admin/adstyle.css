@@ -1,0 +1,300 @@
+:root{
+  --blue:rgb(1,139,237);
+  --blue2:#3B82F6;
+  --lightblue:rgb(222,241,251);
+  --txt-black:#353935;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--txt-black);
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  /* background-color: blue */
+}
+
+.main-content-admin {
+  height: calc(100vh - 70px);
+  width: 100%;
+  position: relative;
+  top: 70px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+.main-admin {
+  height: calc(100vh - 70px);
+  width: 100%;
+  /* overflow-y: scroll; */
+  overflow-x: hidden;
+  padding: 40px 30px 30px 30px;
+  }
+  
+  /* .main-admin::-webkit-scrollbar-thumb {
+  background-image: 
+      linear-gradient(to bottom, rgba(160, 199, 235, 0.937),gray);
+  }
+  .main-admin::-webkit-scrollbar {
+  width: 5px;
+  }
+  .main-admin::-webkit-scrollbar-track {
+  background-color: #9e9e9eb2;
+  } */
+  .heading-container-admin
+        {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content:space-between;
+          align-items: center;
+
+        }
+  .box-container-admin {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+    .box-admin {
+      height: 140px;
+      width: 280px;
+      border-radius: 10px;
+      border:1px solid #b2b8b8;
+      /* box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751); */
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      }
+      .box-logo-admin{
+        color:var(--blue);
+        background-color:rgb(222,241,251);
+        font-size: 30px;
+        height: 50px;
+        width: 50px;
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px;
+      }
+      .box .text {
+        color: black;
+        }
+        .topic {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        }
+        
+        .topic-heading {
+        font-size: 20px;
+        letter-spacing: 3px;
+     
+        }
+        .line-msg{font-weight: 100;}
+
+/* reports /table section */
+.report-container-admin
+{
+width: 100%;
+margin: 70px auto 0px auto;
+border-radius: 10px;
+/* border: 0.5px solid  #b2b2b2;  */
+/* box-shadow: 3px 3px 10px rgb(188, 188, 188); */
+/* padding: 0px 20px 20px 20px; */
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.report-graph
+{
+  border:1px solid #E5E7EB;
+width: 48%;
+cursor: pointer;
+}
+.report-table
+{
+  border-radius: 10px;
+  width: 48%;
+  height: auto;
+}
+.p-datatable-table
+{
+  width: 100%;
+  border-radius: 20px;
+}
+.p-datatable-header{
+  background-color: rgb(222,241,251);
+  color: var(--txt-black);
+  font-weight: 100;
+  text-align: center;
+}
+        
+/* UPLOADs TABLE */
+.top-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-content
+{
+  width: 100%;
+  background-color: #E5E7EB;
+}
+.upload-table th{
+  background-color: var(--lightblue);
+}
+/* UPLOADS/NEW UPLOAD PAGE */
+.new-upload-heading
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+   width: 100%;
+   align-items: center;
+   gap:20px;
+}
+.back-btn{
+  cursor: pointer;
+}
+.back-btn:active {
+  transform: translateY(4px);
+}
+.new-upload-filters{
+  width: 100%;
+  background-color: rgb(246,248,250);
+  padding: 30px 20px 30px 20px  ;
+  border: 1px solid rgb(217,217,217);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.p-dropdown .p-dropdown-label {
+  background: transparent;
+  border: 1px solid gray;
+}
+.new-upload-data
+{
+width: 100%;
+margin-top: 30px;
+}
+.new-upload-data-top{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+.report-dropdown{
+  width: 200px;
+}
+/* file upload page */
+.custom-file-input1 {
+  color: transparent; 
+  margin-top: 4px; 
+}
+.custom-file-input1::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input1::before {
+  content: 'Insert';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  /* border: 1px solid var(--txt-black); */
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 10pt;
+  color: var(--txt-black);
+    background: transparent;
+    padding: 0.45rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px
+}
+.custom-file-input2 {
+  color: transparent; 
+  margin-top: 4px; 
+}
+.custom-file-input2::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input2::before {
+  content: 'Update';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  /* border: 1px solid var(--txt-black); */
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 10pt;
+  color: var(--txt-black);
+    background: transparent;
+    padding: 0.45rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px
+}
+
+
+
+
+/*  */
+.dropbtn {
+  background-color:var(--blue2);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius:6px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: rgb(246,248,250);
+  background-color: white;
+  box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+  border-radius: 10px;
+  min-width: 160px;
+  margin-top: 4px;
+  padding: 4px 0 4px 0;
+  z-index: 1;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.display{
+  display: block;
+}
